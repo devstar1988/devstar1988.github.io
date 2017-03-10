@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>ClassPass UX Assignment by Claudio Vallejo</title>
+    <meta property="og:url" content="http://www.claudiovallejo.mx/classpass">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ClassPass UX Assignment by Claudio Vallejo">
+  <meta property="og:description" content="Welcome! For this assignment I explored with designing a platform that enables users to search nearby trails and book group hiking trips.">
+  <meta property="og:image" content="http://www.claudiovallejo.mx/images/projects/classpass/portrait-og@1x.jpg">
+<!-- To learn more about Open Graph markup, visit Facebook for Developers -> https://developers.facebook.com/docs/sharing/webmasters -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@claudiovallejop">
+  <meta name="twitter:title" content="ClassPass UX Assignment by Claudio Vallejo">
+  <meta name="twitter:description" content="Welcome! For this assignment I explored with designing a platform that enables users to search nearby trails and book group hiking trips.">
+  <meta name="twitter:image" content="http://www.claudiovallejo.mx/images/projects/classpass/portrait-twitter@1x.jpg">
+<meta name="twitter:image:width" content="600">
+<meta name="twitter:image:height" content="600">
+<!-- To learn more about Twitter's Summary Card, visit Twitter for Developers -> https://dev.twitter.com/cards/types/summary -->
+    <link rel="apple-touch-icon" sizes="60x60" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-180x180.png">
+    <link rel="icon" sizes="16x16" href="http://www.claudiovallejo.mx/images/metas/icon-16x16.png">
+    <link rel="icon" sizes="32x32" href="http://www.claudiovallejo.mx/images/metas/icon-32x32.png">
+    <link rel="icon" sizes="96x96" href="http://www.claudiovallejo.mx/images/metas/icon-96x96.png">
+    <link rel="icon" sizes="192x192" href="http://www.claudiovallejo.mx/images/metas/icon-192x192.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+<!-- To generate the favicons, I used frederick-jacques Sketch Favicon Exporter -> https://github.com/frederik-jacques/sketch-favicon-exporter-template -->
+<link rel="shortcut icon" type="image/x-icon" href="http://www.claudiovallejo.mx/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://www.claudiovallejo.mx/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="/stylesheets/tachyons.css" rel="stylesheet" />
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-88097903-2', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body class="js-load opacity-0 duration-1_5 function-ease-io">
+    <nav class="fixed top-0 top-2-l right-0 right-2-l z-999 w-100 w-auto-l tc tr-l shadow-0 shadow-none-l bg-white">
+  <ul class="ma0 pa0 ph2-m ph0-l overflow-x-auto overflow-scrolling overflow-visible-l scrollbar-dn nowrap">
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/classpass" >Home</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/classpass/cover-letter" >Cover Letter</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l  lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/classpass/assignment" >Assignment</a></li>
+  </ul>
+</nav>
+
+    <main class="mt4 cf">
+  <div class="mw45 center mt2-ns ph1 ph2-m ph0-l">
+    <section class="mt1 mt0-ns mb4 cf">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline pv2 pl2 pr4 bg-white" href="/classpass/cover-letter">
+        <div class="relative mb1 h0_75">
+          <h3 class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Cover Letter</h3>
+          <h3 class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">Read Letter</h3>
+        </div>
+        <h1 class="ma0 mb0_5 merriweather f1 fw4 dark-gray">Leading an Active Life</h1>
+        <p class="ma0 merriweather f1 fw3 dark-gray lh1_75">My interest in joining the ClassPass team and the role exercise and proper nutrition have played in my life.</p>
+      </a>
+    </section>
+    <section class="mb4 cf">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="/classpass/assignment">
+        <picture>
+          <img class="db w-100" src="/images/projects/classpass/card@1x.jpg" srcset="/images/projects/classpass/card@1x.jpg 1x, /images/projects/classpass/card@2x.jpg 2x" alt="ClassPass UX Assignment">
+        </picture>
+        <div class="pa2">
+          <h1 class="ma0 mb0_5 merriweather f1 fw4 black lh1_75">Voyage App for iOS</h1>
+          <div class="relative h0_75">
+            <h3 class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">UX Assignment</h3>
+            <h3 class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">Read Assignment</h3>
+          </div>
+        </div>
+      </a>
+    </section>
+    <section class="mb4 cf">
+      <header class="mb2">
+        <h1 class="ma0 merriweather f1_125 fw3 dark-gray">Contact Links</h1>
+      </header>
+        <div class="fl w-100 w-50-ns mb1 mb1-ns pr0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/website.svg" class="v-mid" alt="Website" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">Website</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">claudiovallejo.mx</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+        <div class="fl w-100 w-50-ns mb1 mb1-ns pl0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/resume.svg" class="v-mid" alt="Resume" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">Resume</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">PDF File</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+        <div class="fl w-100 w-50-ns mb1 mb1-ns pr0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/email.svg" class="v-mid" alt="Email" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">Email</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">hola@claudiovallejo.mx</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">Send Message</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+        <div class="fl w-100 w-50-ns mb1 mb1-ns pl0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/phone.svg" class="v-mid" alt="Phone" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">Mobile</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">+52 (81) 2010 3857</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">Call Mobile</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+        <div class="fl w-100 w-50-ns mb1 mb1-ns pr0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/twitter.svg" class="v-mid" alt="Twitter" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">Twitter</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">@claudiovallejop</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Profile</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+        <div class="fl w-100 w-50-ns mb1  pl0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/dribbble.svg" class="v-mid" alt="Dribbble" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">Dribbble</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">@claudiovallejo</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Profile</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+        <div class="fl w-100 w-50-ns   pr0_5-ns">
+          <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline" href="" target="_blank">
+            <table class="w-100 collapse">
+              <tbody>
+                <tr>
+                  <td class="tc w-20">
+                    <img src="/images/sources/github.svg" class="v-mid" alt="Github" />
+                  </td>
+                  <td class="w-80 pv1 pl1 bl b--pearl">
+                    <p class="ma0 mb0_5 merriweather f1 dark-gray">GitHub</p>
+                    <div class="relative h0_75">
+                      <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">@claudiovallejo</p>
+                      <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Profile</p>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </a>
+        </div>
+    </section>
+  </div>
+</main>
+
+  </body>
+  <script src="/javascripts/all.js"></script>
+</html>

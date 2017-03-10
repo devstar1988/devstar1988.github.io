@@ -1,0 +1,612 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>Voyage App for iOS Case Study</title>
+    <meta property="og:url" content="http://claudiovallejo.mx">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Voyage App for iOS">
+  <meta property="og:description" content="A dive into the research and ideation that guided the design of a group hiking app">
+  <meta property="og:image" content="http://www.claudiovallejo.mx/images/projects/materiales-vallejo/meta-og.jpg">
+<!-- To learn more about Open Graph markup, visit Facebook for Developers -> https://developers.facebook.com/docs/sharing/webmasters -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@claudiovallejop">
+  <meta name="twitter:title" content="Voyage App for iOS">
+  <meta name="twitter:description" content="A dive into the research and ideation that guided the design of a group hiking app">
+  <meta name="twitter:image" content="http://www.claudiovallejo.mx/images/projects/materiales-vallejo/meta-twitter.jpg">
+<!-- To learn more about Twitter's Summary Card, visit Twitter for Developers -> https://dev.twitter.com/cards/types/summary -->
+    <link rel="apple-touch-icon" sizes="60x60" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-180x180.png">
+    <link rel="icon" sizes="16x16" href="http://www.claudiovallejo.mx/images/metas/icon-16x16.png">
+    <link rel="icon" sizes="32x32" href="http://www.claudiovallejo.mx/images/metas/icon-32x32.png">
+    <link rel="icon" sizes="96x96" href="http://www.claudiovallejo.mx/images/metas/icon-96x96.png">
+    <link rel="icon" sizes="192x192" href="http://www.claudiovallejo.mx/images/metas/icon-192x192.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+<!-- To generate the favicons, I used frederick-jacques Sketch Favicon Exporter -> https://github.com/frederik-jacques/sketch-favicon-exporter-template -->
+<link rel="shortcut icon" type="image/x-icon" href="http://www.claudiovallejo.mx/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://www.claudiovallejo.mx/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="/stylesheets/tachyons.css" rel="stylesheet" />
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-88097903-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body class="js-load opacity-0 duration-1_5 function-ease-io">
+    <nav class="fixed top-0 top-2-l right-0 right-2-l z-999 w-100 w-auto-l tc tr-l shadow-0 shadow-none-l bg-white">
+  <ul class="ma0 pa0 ph2-m ph0-l overflow-x-auto overflow-scrolling overflow-visible-l scrollbar-dn nowrap">
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/" >Home</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/writing" >Writing</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/about" >About</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l  lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="https://github.com/claudiovallejo/portfolio" target="_blank">Source Code</a></li>
+  </ul>
+</nav>
+
+    <article class="mt4">
+  <header>
+    <div class="mw45 center pv4 ph1 ph2-m ph0-l">
+      <h3 class="mb2 lato f0_75 fw7 ls0_15 ttu gray">
+          Case Study
+      </h3>
+      <h1 class="mb1 merriweather f2 fw3 dark-gray">Voyage App for iOS</h1>
+      <h2 class="w-80-ns  lato f1_5 fw3 lh1_50 dark-gray">A dive into the research and ideation that guided the design of a group hiking app</h2>
+    </div>
+  </header>
+    <section class="mb4 cf">
+          <div class="mw60 center mb4">
+  <img class="w-100" srcset="/images/projects/classpass/hero@2x.jpg 2x" src="/images/projects/classpass/hero@1x.jpg" alt="Voyage app for iOS">
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Introduction</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">This is a practice case study I worked on early January 2017. I worked on the case study as a Product Design job application assignment, and worked on it for 1 week.</p>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Prompt and Guidelines</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Design a service to organize group hiking trips with people in your area—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Outline user goals / tasks that should be supported in the experience. Consider what constraints, requirements, and assumptions you are making with your design.</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Produce a low-fidelity overview of the product or feature (wireframes or sketches are fine) that illustrates how users could get from the start page of this offering to meeting their goals. Design one high-fidelity screen for any individual moment or interaction to showcase visual design capabilities.</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Try not to spend more than a few hours. This doesn’t need to be too thorough, we are just looking to learn a bit more about your process, creative thinking, and design skills (e.g. don’t worry about a complete architecture of the application, feel free to just explore one possible flow or task)</p></li>
+      </ul>
+    </div>
+    <div class="mb4">
+      <ul class="ma0 pl2 lst-circle">
+        <li class=""><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Any file format is fine to express your idea (e.g. PDF, keynote, presentation, sketch file, prototype, website, zip, dropbox folder, etc,.)</p></li>
+      </ul>
+    </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Business Details</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb2 merriweather f1_125 fw3 dark-gray lh2">Voyage is a business whose mission is to connect people with nature. Voyage is an iOS app that enables people to explore hiking trails and organize group hiking trips. Voyage has three main goals that guide the app's design and functionality—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Make Nature Easy to Explore</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Voyage wants to be the most reliable resource to learn about nearby trails to prepare for and organize safe group hiking trips.</p>
+    </div>
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Make Nature Safe to Explore</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Voyage wants to make outdoor exploration as safe as possible by documenting important trail details and by working with local governments to maintain local trails.</p>
+    </div>
+    <div class="mb4">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Create a Community of Outdoor Enthusiasts</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Voyage represents a community of people that care about nature and each other and believes that an integral component of growing and nurturing a loving community is by enabling users to create new trails, update trail information, and report trail damages and hiker misconduct.</p>
+    </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">User Details</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">User needs are defined based on personal hiking experiences and online research about hiker needs and preferences. One important report I found online, <a class="no-underline bb b--light-gray space-gray dim" href="http://www.outdoorfoundation.org/pdf/ResearchParticipation2016.pdf" target="_blank">2016 Outdoor Participation Report</a> by <a class="no-underline bb b--light-gray space-gray dim" href="http://www.outdoorfoundation.org/" target="_blank">Outdoor Foundation</a>, states that some of the reasons why Americans enjoy outdoor activities (including hiking) are to exercise, stay fit, spend time with others, and admire and be close to nature.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb2 merriweather f1_125 fw3 dark-gray lh2">Some of the most important assumptions I made to design the Voyage experience include—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Hiking Nearby Trails</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Hikers will signup for nearby trails more often than more distant trails.</p>
+    </div>
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Hiking Shorter Trails</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Hikers will signup for hikes in shorter trails more frequently than longer trails.</p>
+    </div>
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Pre-hike Research</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Hikers prepare for hiking trips to ensure their experience is safe and as predictable as possible.</p>
+    </div>
+    <div class="mb4">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Group Hiking</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Hikers enjoy hiking in groups to meet new people and stay safe.</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Some of the most important tasks users can accomplish within the Voyage app include—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Explore trails on a map or list</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Search trails by name, region, city, state, and country</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Filter trail results by distance to trail, trail length, terrain type, and trail entrance fee</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">View trail profiles</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Create a new hike</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Join/leave an upcoming hike</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Invite hikers to an upcoming hike</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">View hiker profiles</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">File a report for hiker misconduct</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Create a new trail and submit for approval</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">File a report for trail issues/damages</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">View recent and upcoming hikes</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Save favorite trails</p></li>
+      </ul>
+    </div>
+    <div class="mb4">
+      <ul class="ma0 pl2 lst-circle">
+        <li class=""><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Control hike notification settings</p></li>
+      </ul>
+    </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Wireframe</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb2 merriweather f1_125 fw3 dark-gray lh2">The app has four main sections—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Explore</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Search available trails by name, region, city, state, and country.</p>
+    </div>
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Hikes</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">View a list of upcoming hikes you've signed up for.</p>
+    </div>
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Favorites</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">View a list of your favorite trails and receive trail update notifications.</p>
+    </div>
+    <div class="mb4">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">My Profile</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Edit and control your hiker profile, invite friends, control app settings, review report history, and create a new trail submission.</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">I designed a simple wireframe that depicts the app's flows without creating too much clutter. I grouped related section screens and created 'portals' to illustrate the connection of a section screen with the two main content types—Trail Profiles and Hiker Profiles.</p>
+</div>
+
+          <div class="mw60 center mb4">
+  <img class="w-100" srcset="/images/projects/classpass/wireframe@2x.jpg 2x" src="/images/projects/classpass/wireframe@1x.jpg" alt="High-level view of the app's sections, sub-screens, and flows.">
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Trail Search Flow</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">When launching the app, logged in users are taken to the Explore tab, which displays a map view of the user’s location and nearby trails to provide users with a sense of location and relative position.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/classpass/default-map-view@2x.jpg 2x" src="/images/projects/classpass/default-map-view@1x.jpg" alt="Screen of the app's default map view on launch.">
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Trail pins display a trail's start point, length, and entrance fees. Tapping a pin displays the trail’s end point, animates the trail’s path, and zooms the map to fit the entire trail into view. Above the trail a card-style gallery appears displaying important trail details to provide users with a glimpse of the displayed trail. Swiping the gallery re-positions the map to display a different trail.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/classpass/trail-map-view@2x.jpg 2x" src="/images/projects/classpass/trail-map-view@1x.jpg" alt="Close-up view of a selected trail displaying a trail's path and a trail card gallery to navigate between nearby trails.">
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">The map view can be toggled to display a list of nearby trails. The list view enables users to search trails in a more linear, structured way that provides users a more detailed trail view.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/classpass/list-view@2x.jpg 2x" src="/images/projects/classpass/list-view@1x.jpg" alt="A complementary list view of the nearby trails to provide a more linear, structured way of exploring trails.">
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Trails can be searched by name, region, city, state, and country. Search results prioritize trails over larger regions and user location to make it faster for users to find nearby points of interest.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/classpass/search-view@2x.jpg 2x" src="/images/projects/classpass/search-view@1x.jpg" alt="The search view enables users to quickly search trails by name, region, city, state, and country.">
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Filters enable users to control displayed trails. Users can filter results by distance, trail length, trail entrance fee, and trail types.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/classpass/filter-view@2x.jpg 2x" src="/images/projects/classpass/filter-view@1x.jpg" alt="Trail results can be filtered to provide custom views of trails aligned with user interests.">
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Pressing a trail card on the map or list view takes users to the trail profile. Trail profiles were designed to provide users with important information that helps users plan and prepare for a safe hiking experience. Trail profiles display trail details and suggested gear equipment prior to listing upcoming hikes to ensure users know what to expect from the hike.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">The trail profile features an Upcoming Hikes section that contains a gallery of cards displaying available hikes. Users can sign up for hikes, invite other hikers to an available hike, and create a new hike.</p>
+</div>
+
+          <div class="mw60 center mb4">
+  <img class="w-100" srcset="/images/projects/classpass/trail-view@2x.jpg 2x" src="/images/projects/classpass/trail-view@2x.jpg" alt="Trail profile card screen.">
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Naming and Logo</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">When thinking about a name for the service, I started writing down words that reminded me of nature, connection, community, and exploration—</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/classpass/branding-challenge@2x.jpg 2x" src="/images/projects/classpass/branding-challenge@1x.jpg" alt="Branding challenge sketches and notes.">
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">I selected Voyage (French for trip) because it evokes feelings of adventure, courage, and curiosity which are feelings hikers may experience when exploring new trails. I also opted for Voyage because I didn’t want to use a word that was explicitly related to hiking, as I believe the app’s model (after being tested and researched) could be expanded to incorporate other types of outdoor activities like kayaking, rock climbing, and biking.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">After selecting the name I started exploring with different logos. I was looking for a logo that reflected a brand that was modern, simple, and contained a small hint of the outdoors. I was looking for a simple logo with very little branding because I wanted to create an experience that focused more on hiking and nature than on the business and the brand.</p>
+</div>
+
+          <div class="mw60 center mb4">
+  <img class="w-100" srcset="/images/projects/classpass/logo@2x.jpg 2x" src="/images/projects/classpass/logo@1x.jpg" alt="Voyage logo.">
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Early Explorations</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">I did a lot of exploring and questioning to define the business and user assumptions that guided the app’s design. Most of my thought process and ideation happened on paper. Here are all the sketches and notes I took as I worked through this assignment—</p>
+</div>
+
+          <div class="mb2">
+    <div class="mw45 center mb1 ph1 ph2-m ph0-l">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Wireframe and Flows</h4>
+    </div>
+  <div class="mw60 center">
+    <ul class="ma0 pa0 overflow-x-auto overflow-y-hidden overflow-scrolling scrollbar-dn nowrap">
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/flow-1@1x.jpg" srcset="/images/projects/classpass/flow-1@2x.jpg 2x" alt="Test">
+        </li>
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/flow-2@1x.jpg" srcset="/images/projects/classpass/flow-2@2x.jpg 2x" alt="Test">
+        </li>
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/flow-3@1x.jpg" srcset="/images/projects/classpass/flow-3@2x.jpg 2x" alt="Test">
+        </li>
+    </ul>
+  </div>
+    <div class="mw60 center">
+      <p class="ma0 ph0_5 ph0-ns lato f0_75 fw4 blue tr">Scrollable image gallery ⇾</p>
+    </div>
+</div>
+
+          <div class="mb2">
+    <div class="mw45 center mb1 ph1 ph2-m ph0-l">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Menu Icons</h4>
+    </div>
+  <div class="mw60 center">
+    <ul class="ma0 pa0 overflow-x-auto overflow-y-hidden overflow-scrolling scrollbar-dn nowrap">
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/menu-icons@1x.jpg" srcset="/images/projects/classpass/menu-icons@2x.jpg 2x" alt="Lorem ipsum">
+        </li>
+    </ul>
+  </div>
+</div>
+
+          <div class="mb2">
+    <div class="mw45 center mb1 ph1 ph2-m ph0-l">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Explore Section</h4>
+    </div>
+  <div class="mw60 center">
+    <ul class="ma0 pa0 overflow-x-auto overflow-y-hidden overflow-scrolling scrollbar-dn nowrap">
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/explore@1x.jpg" srcset="/images/projects/classpass/explore@2x.jpg 2x" alt="Lorem ipsum">
+        </li>
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/filters@1x.jpg" srcset="/images/projects/classpass/filters@2x.jpg 2x" alt="Lorem ipsum">
+        </li>
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/search@1x.jpg" srcset="/images/projects/classpass/search@2x.jpg 2x" alt="Lorem ipsum">
+        </li>
+    </ul>
+  </div>
+    <div class="mw60 center">
+      <p class="ma0 ph0_5 ph0-ns lato f0_75 fw4 blue tr">Scrollable image gallery ⇾</p>
+    </div>
+</div>
+
+          <div class="mb2">
+    <div class="mw45 center mb1 ph1 ph2-m ph0-l">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Trail Profile</h4>
+    </div>
+  <div class="mw60 center">
+    <ul class="ma0 pa0 overflow-x-auto overflow-y-hidden overflow-scrolling scrollbar-dn nowrap">
+        <li class="dib">
+          <img class="w-100" src="/images/projects/classpass/trail-profile@1x.jpg" srcset="/images/projects/classpass/trail-profile@2x.jpg 2x" alt="Lorem ipsum">
+        </li>
+    </ul>
+  </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Concluding Insights</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Voyage was designed based on very little hiking experience, minimal online research, and a lot of hiker assumptions. I could keep on exploring and testing out new layouts, but I'm aware that they would be based on assumptions and that user testing and feedback are the only way of validating these assumptions to create more focused, guided explorations that are aligned with real user needs.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Despite my best efforts to create 'realistic' assumptions about user needs and expectations, if I were to continue working on this assignment I would reconsider the following things/features—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Add a 'nearby hikes' view</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Rename 'Hikes' tab to 'Upcoming Hikes'</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Make scheduling hikes the main focus of the app</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Clearly define user experience level</p></li>
+      </ul>
+    </div>
+    <div class="mb0_5">
+      <ul class="ma0 pl2 lst-circle">
+        <li class="mb1"><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Engage with target user and ask about the information they need prior to preparing for a hike</p></li>
+      </ul>
+    </div>
+    <div class="mb4">
+      <ul class="ma0 pl2 lst-circle">
+        <li class=""><p class="ma0 merriweather f1_125 fw3 lh1_75 dark-gray">Define a clear system for adding trail badges and icons</p></li>
+      </ul>
+    </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Assignment Assets</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb2 merriweather f1_125 fw3 dark-gray lh2">If you're interested, you can take a closer look at the assignment assets. I've cleaned up the files to facilitate their exploration—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="fl w-100 w-50-ns mb2 pr1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.figma.com/file/BYlbBM9dAydOHKNHSjNJoMAu/Menu-Icons" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/assets/figma-file.svg" class="v-mid" alt="Figma file" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Menu Icons</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Figma File</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View File</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pl1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.figma.com/file/HiyxOnA1V6mWYLY5JrSjWdZn/Wireframe" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/assets/figma-file.svg" class="v-mid" alt="Figma file" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Wireframes</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Figma File</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View File</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pr1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.figma.com/file/UmhxiKz5XvEtJ2psKIHBWbXL/Logo" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/assets/figma-file.svg" class="v-mid" alt="Figma file" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Voyage Logo</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Figma File</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View File</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pl1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.figma.com/file/dFc0VptU3ZeSJTZcZ14BFWpO/Join-Hike-Flow" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/assets/figma-file.svg" class="v-mid" alt="Figma file" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Explore Tab UI</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Figma File</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View File</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns  pr1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.figma.com/file/FgHskjlaN0w1DYZJQgftmzAE/Assignment-Imagery" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/assets/figma-file.svg" class="v-mid" alt="Figma file" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Assignment Imagery</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Figma File</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View File</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+</div>
+
+    </section>
+</article>
+
+  </body>
+  <script src="/javascripts/all.js"></script>
+</html>

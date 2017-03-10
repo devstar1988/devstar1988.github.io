@@ -1,0 +1,31 @@
+<svg width="64" height="64" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>figma</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-9464 -10428)" figma:type="canvas">
+<mask id="mask0_alpha" mask-type="alpha">
+<path d="M 9464 10428L 9528 10428L 9528 10492L 9464 10492L 9464 10428Z" fill="#FFFFFF"/>
+</mask>
+<g id="figma" style="mix-blend-mode:normal;" mask="url(#mask0_alpha)" figma:type="frame">
+<g id="Rectangle 23" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<mask id="mask1_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(9485.6 10446.6)"/>
+</mask>
+<g mask="url(#mask1_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(9485.6 10446.6)" fill="#9B51E0" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="Rectangle 23" style="mix-blend-mode:normal;" figma:type="rounded-rectangle">
+<mask id="mask2_outline_ins">
+<use xlink:href="#path0_fill" fill="white" transform="translate(9479 10440)"/>
+</mask>
+<g mask="url(#mask2_outline_ins)">
+<use xlink:href="#path1_stroke_2x" transform="translate(9479 10440)" fill="#9B51E0" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" d="M 0 0L 26.4 0L 26.4 34.3871L 0 34.3871L 0 0Z"/>
+<path id="path1_stroke_2x" d="M 0 0L 0 -1L -1 -1L -1 0L 0 0ZM 26.4 0L 27.4 0L 27.4 -1L 26.4 -1L 26.4 0ZM 26.4 34.3871L 26.4 35.3871L 27.4 35.3871L 27.4 34.3871L 26.4 34.3871ZM 0 34.3871L -1 34.3871L -1 35.3871L 0 35.3871L 0 34.3871ZM 0 1L 26.4 1L 26.4 -1L 0 -1L 0 1ZM 25.4 0L 25.4 34.3871L 27.4 34.3871L 27.4 0L 25.4 0ZM 26.4 33.3871L 0 33.3871L 0 35.3871L 26.4 35.3871L 26.4 33.3871ZM 1 34.3871L 1 0L -1 0L -1 34.3871L 1 34.3871Z"/>
+</defs>
+</svg>

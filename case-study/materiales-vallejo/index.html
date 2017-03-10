@@ -1,0 +1,374 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <title>Materiales Vallejo Case Study</title>
+    <meta property="og:url" content="http://claudiovallejo.mx">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Materiales Vallejo">
+  <meta property="og:description" content="A design overview of the store's first website and the business and user needs that guided the site's design">
+  <meta property="og:image" content="http://www.claudiovallejo.mx/images/projects/materiales-vallejo/meta-og.jpg">
+<!-- To learn more about Open Graph markup, visit Facebook for Developers -> https://developers.facebook.com/docs/sharing/webmasters -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@claudiovallejop">
+  <meta name="twitter:title" content="Materiales Vallejo">
+  <meta name="twitter:description" content="A design overview of the store's first website and the business and user needs that guided the site's design">
+  <meta name="twitter:image" content="http://www.claudiovallejo.mx/images/projects/materiales-vallejo/meta-twitter.jpg">
+<!-- To learn more about Twitter's Summary Card, visit Twitter for Developers -> https://dev.twitter.com/cards/types/summary -->
+    <link rel="apple-touch-icon" sizes="60x60" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-180x180.png">
+    <link rel="icon" sizes="16x16" href="http://www.claudiovallejo.mx/images/metas/icon-16x16.png">
+    <link rel="icon" sizes="32x32" href="http://www.claudiovallejo.mx/images/metas/icon-32x32.png">
+    <link rel="icon" sizes="96x96" href="http://www.claudiovallejo.mx/images/metas/icon-96x96.png">
+    <link rel="icon" sizes="192x192" href="http://www.claudiovallejo.mx/images/metas/icon-192x192.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="http://www.claudiovallejo.mx/images/metas/apple-touch-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+<!-- To generate the favicons, I used frederick-jacques Sketch Favicon Exporter -> https://github.com/frederik-jacques/sketch-favicon-exporter-template -->
+<link rel="shortcut icon" type="image/x-icon" href="http://www.claudiovallejo.mx/favicon.ico">
+<link rel="icon" type="image/x-icon" href="http://www.claudiovallejo.mx/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="/stylesheets/tachyons.css" rel="stylesheet" />
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-88097903-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body class="js-load opacity-0 duration-1_5 function-ease-io">
+    <nav class="fixed top-0 top-2-l right-0 right-2-l z-999 w-100 w-auto-l tc tr-l shadow-0 shadow-none-l bg-white">
+  <ul class="ma0 pa0 ph2-m ph0-l overflow-x-auto overflow-scrolling overflow-visible-l scrollbar-dn nowrap">
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/" >Home</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/writing" >Writing</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l pb1-l lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="/about" >About</a></li>
+      <li class="js-nav translateX-0 duration-0_25 property-transform function-cubic dib db-l ma0 pa0 pv0_5 pv0-l ph1 ph2-m ph0-l"><a class="dib pv1 pv0-l  lato f0_75 fw7 ls0_15 ttu gray link hover-dark-gray" href="https://github.com/claudiovallejo/portfolio" target="_blank">Source Code</a></li>
+  </ul>
+</nav>
+
+    <article class="mt4">
+  <header>
+    <div class="mw45 center pv4 ph1 ph2-m ph0-l">
+      <h3 class="mb2 lato f0_75 fw7 ls0_15 ttu gray">
+          Case Study
+      </h3>
+      <h1 class="mb1 merriweather f2 fw3 dark-gray">Materiales Vallejo</h1>
+      <h2 class="w-80-ns mb2 lato f1_5 fw3 lh1_50 dark-gray">A design overview of the store's first website and the business and user needs that guided the site's design</h2>
+        <ul class="pa0 list">
+            <li class="js-source shadow-0 translateY-0 duration-0_25 property-all dib tc bg-white mb1 mr1">
+              <a class="dib w9 pv1 lato f0_75 fw7 ls0_15 ttu dark-gray no-underline" href="http://materialesvallejo.netlify.com" target="_blank">Website</a>
+            </li>
+            <li class="js-source shadow-0 translateY-0 duration-0_25 property-all dib tc bg-white ">
+              <a class="dib w9 pv1 lato f0_75 fw7 ls0_15 ttu dark-gray no-underline" href="https://github.com/claudiovallejo/materiales-vallejo" target="_blank">Source Code</a>
+            </li>
+        </ul>
+    </div>
+  </header>
+    <section class="mb4 cf">
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Materiales Vallejo is a small building material store in Matamoros, Mexico selling cement, steel rebars, and other building materials to local clients. The business needed a website to engage with new clients and to serve as a tool to expedite their hiring process.</p>
+</div>
+
+          <div class="mw45 center mb4 ph1 ph2-m ph0-l">
+  <div class="pa1 pa2-ns bg-almost-white ba b--light-gray">
+    <p class="ma0 merriweather f1_125 fw3 dark-gray lh2">The <a class="no-underline bb b--light-gray dark-gray dim" href="https://www.materialesvallejo.com/" target="_blank">official business website</a> is in Spanish, so a separate English website was built to use as reference for this case study.</p>
+  </div>
+</div>
+
+          <div class="mw60 center mb4">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/hero@2x.jpg 2x" src="/images/projects/materiales-vallejo/hero@1x.jpg" alt="Materiales Vallejo Case Study: Designing and building a material store's first website.">
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Business Details</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Materiales Vallejo’s revenue comes from sales to local material stores, hardware stores, construction firms and individuals. Most clients are long-term clients and have a close relationship with the business. Clients are used to negotiate product pricing and payment terms. As a consequence, phone and in-person interactions are preferred to facilitate negotiation. Clients call the business at least once a week to inquire about product availability and establish new orders.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Materiales Vallejo uses manual processes for daily management tasks. It doesn’t count with an up-to-date inventory system and most of its sales transactions are made with cash. When there’s an available job, the business purchases newspaper and radio ads with a job description and application instructions. Interested applicants are asked to purchase a job application form at a local office supply store and deliver the application in person or email a scanned copy.</p>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">User Details</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">The core user profile is based on Materiales Vallejo’s client profile. Most clients are familiar with building material use and terminology and prefer to engage with the business on the phone. Core users are construction firm secretaries and small business owners hunting for the cheapest prices across town. Core users will need to know about the business, what it offers, and how to get in touch with the business.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Secondary users are potential job applicants that will find out about the available job through a newspaper or radio ad. Instead of sending applicants to purchase an application form, the ad will provide a link to the job detail page where potential new hires will find out more about the job and fill out and submit an application form.</p>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Website Details</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">The website was designed to provide a fast but complete run through of the business. The site has a landing page, about page, and dynamic careers pages. The landing page was designed primarily for core users, and provides all the information they need for a quick experience. The landing page was designed for fast consumption to minimize search time and maximize the probability of turning the visit into an engagement.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">The navigation menu is fixed and has a contact button that displays the available form of contact at the time of visit. If the store is open, the button invites users to call the store. If the business is out for lunch or closed, the button invites users to send an email.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/nav-detail@2x.jpg 2x" src="/images/projects/materiales-vallejo/nav-detail@1x.jpg" alt="Dynamic desktop navigation menus and dynamic mobile contact buttons.">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Dynamic desktop and mobile contact buttons.</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">The landing page's hero section has a dark background to focus the user's attention on the section's content, which briefly describes who the business is and what it does. The section has two buttons that link to the product and service sections to provide fast links to important sections of the page.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/hero-detail@2x.jpg 2x" src="/images/projects/materiales-vallejo/hero-detail@1x.jpg" alt="Desktop hero section">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Desktop hero section</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">A carousel was designed to provide a quick way of navigating through the available products. Products were grouped by category for fast product navigation and categories were ordered by popularity. On desktops, users can navigate the carousel with the navigation arrows. On mobiles and tablets, users can scroll through the carousel to navigate through the available products.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/carousel-detail-desktop@2x.jpg 2x" src="/images/projects/materiales-vallejo/carousel-detail-desktop@1x.jpg" alt="Desktop product carousel with navigation arrows">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Desktop product carousel with navigation arrows</p>
+    </div>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/carousel-detail-tablet@2x.jpg 2x" src="/images/projects/materiales-vallejo/carousel-detail-tablet@1x.jpg" alt="Scrollable tablet product carousel">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Scrollable tablet product carousel</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Product cards were designed to inform users about product availability. Tapping the card displays details about sale unit and available measurements.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/card-detail@2x.jpg 2x" src="/images/projects/materiales-vallejo/card-detail@1x.jpg" alt="Default and active product card states">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Default and active product card states</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">The contact section displays dynamic content that updates based on the store’s current status. If the business is open, the section’s description invites users to call the business and the store number is highlighted and calls the store. If the business is out for lunch or closed, the section’s description informs the user of the store’s status and the email is highlighted and opens the user’s email client.</p>
+</div>
+
+          <div class="mw60 center mb2">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/contact-detail@2x.jpg 2x" src="/images/projects/materiales-vallejo/contact-detail@1x.jpg" alt="Mobile contact sections—open out for lunch, and closed states">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Mobile contact sections: open, out for lunch, and closed states</p>
+    </div>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">When there’s an available job the index and about pages display a job banner above the footer to avoid interrupting the core user’s experience. A careers page is dynamically created and lists the available jobs. Each job has a job detail page that displays a brief job description and links to a job application form. Job application forms are designed based on the standard Mexican job application forms.</p>
+</div>
+
+          <div class="mw60 center mb4">
+  <img class="w-100" srcset="/images/projects/materiales-vallejo/job-detail@2x.png 2x" src="/images/projects/materiales-vallejo/job-detail@1x.png" alt="Mobile job banner, job detail, and application form">
+    <div class="mw45 center tc mt1 ph1 ph0-ns">
+      <p class="ma0 lato f1 fw4 lh1_25 gray">Mobile job banner, job detail, and application form</p>
+    </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Next Steps</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb1 merriweather f1_125 fw3 dark-gray lh2">Materiales Vallejo’s website was published on December 2016 and is tracking user data to learn more about the user's context. Despite the business not being interested in investing more time on the website, I'll be monitoring the site's activity and check for cross-browser compatible bugs and other issues.</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb4 merriweather f1_125 fw3 dark-gray lh2">Through this project I got a chance to learn more about the way the business operates and handles daily tasks. While Materiales Vallejo's transactions are still cash-based and online shopping is years away, there are other areas where software business tools could expedite daily tasks and improve communication with clients. I've talked with my client about designing a business tool to help them in daily operations, and may pursue the opportunity if it opens up.</p>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Insights</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+  <p class="ma0 mb2 merriweather f1_125 fw3 dark-gray lh2">The project was a great opportunity to work on the full design and development process. When the project started I had prior experience with website builders and a limited understanding of HTML, CSS, and JavaScript. Throughout the project I faced multiple challenges and made innumerable mistakes on a number of different areas—communication, process, time management, design, and development. Through these challenges and mistakes I became aware of several business and design principles—</p>
+</div>
+
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Building Tools</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">The value of a business website comes from solving real business problems. Business web design is about building usable tools, not useless trophies.</p>
+    </div>
+    <div class="mb2">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">External Factors</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">The ideal design solution may not be the right solution due to long-time business habits, technical limitations, and personal and cultural factors.</p>
+    </div>
+    <div class="mb4">
+      <h4 class="ma0 mb1 merriweather f1_125 fw4 dark-gray">Iteration</h4>
+      <p class="ma0 merriweather f1_125 fw3 lh2 dark-gray">Product design is not a one-time thing. It's a continuous, long-term process composed of many small improvements and updates based on user and business needs.</p>
+    </div>
+</div>
+
+    </section>
+    <section class="mb4 cf">
+        <div class="mw45 center mb2 ph1 ph2-m ph0-l">
+          <h1 class="relative z-2 dib ma0 merriweather f1_5 fw4 dark-gray">Toolkit</h1>
+        </div>
+          <div class="mw45 center ph1 ph2-m ph0-l">
+    <div class="fl w-100 w-50-ns mb2 pr1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="http://swipi.es/" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/tools/swipies.svg" class="v-mid" alt="Swipies" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Swipies</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Reusable Grid Paper</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pl1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.figma.com/" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/tools/figma.svg" class="v-mid" alt="Figma" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Figma</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">UI Design App</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pr1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://middlemanapp.com/" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/tools/middleman.svg" class="v-mid" alt="Middleman" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Middleman</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Static Site Generator</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pl1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="http://tachyons.io/" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/tools/tachyons.svg" class="v-mid" alt="Tachyons" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Tachyons</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Functional CSS Library</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns mb2 pr1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="http://gulpjs.com/" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/tools/gulp.svg" class="v-mid" alt="Gulp" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Gulp.js</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Streaming Build System</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+    <div class="fl w-100 w-50-ns  pl1-ns">
+      <a class="js-link shadow-0 translateY-0 duration-0_25 property-all db no-underline bg-white" href="https://www.netlify.com/" target="_blank">
+        <table class="w-100 collapse">
+          <tbody>
+            <tr>
+              <td class="tc w-20">
+                <img src="/images/tools/netlify.svg" class="v-mid" alt="Netlify" />
+              </td>
+              <td class="w-80 pv1 pl1 bl b--pearl">
+                <p class="ma0 mb0_5 merriweather f1 dark-gray">Netlify</p>
+                <div class="relative h0_75">
+                  <p class="js-title opacity-1 duration-0_25 property-opacity absolute ma0 pr1 lato f0_75 fw7 ls0_15 ttu gray">Hosting</p>
+                  <p class="js-title opacity-0 duration-0_25 property-opacity absolute ma0 lato f0_75 fw7 ls0_15 ttu gray">View Site</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </a>
+    </div>
+</div>
+
+    </section>
+</article>
+
+  </body>
+  <script src="/javascripts/all.js"></script>
+</html>
